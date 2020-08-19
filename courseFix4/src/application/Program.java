@@ -20,7 +20,7 @@ public class Program {
 		System.out.print("Insira quantos dólares você quer comprar: ");
 		double dolar = sc.nextDouble();
 			
-		System.out.printf("Custará: R$ %.2f%n",CurrencyConverter.toBRL(dolar, real));
+		System.out.printf("Custará: R$ %.2f%n", CurrencyConverter.toBRL(dolar, real));
 		
 		sc.close();
 	}
