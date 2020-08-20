@@ -5,16 +5,17 @@ public class Student {
 	public double n1;
 	public double n2;
 	public double n3;
-	
+
 	public double finalGrade() {
 		return n1 + n2 + n3;
 	}
+
 	public String passedOn() {
-		if(finalGrade() < 60 ){
-			return "Failed \nMissing " + (60 - finalGrade()) + " points"; 
+		if (finalGrade() < 60) {
+			return "Failed \nMissing " + (60 - finalGrade()) + " points";
 		} else {
 			return "\nPass";
 		}
 	}
-	
+
 }
