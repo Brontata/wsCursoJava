@@ -11,7 +11,16 @@ public class Product {
 		this.price = price;
 		this.quantity = quantity;
 	}
-	
+
+	public Product(String name, double price) { 
+		this.name = name;
+		this.price = price;
+	}
+
+	public Product() { //construtor padrão, necessita ser instanciado
+
+	}
+
 	public double totalValueInStock() {
 		return price * quantity;
 	}
@@ -25,12 +34,7 @@ public class Product {
 	}
 
 	public String toString() {
-		return name 
-				+ ", $ " 
-				+ String.format("%.2f", price) 
-				+ ", " 
-				+ quantity 
-				+ " units, Total: $ "
+		return name + ", $ " + String.format("%.2f", price) + ", " + quantity + " units, Total: $ "
 				+ String.format("%.2f", totalValueInStock());
 
 	}
