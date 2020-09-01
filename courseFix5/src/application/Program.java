@@ -16,31 +16,34 @@ public class Program {
 		String accountNumber = sc.nextLine();
 		System.out.print("Holder: ");
 		String name = sc.nextLine();
-		BankAccount account = new BankAccount(accountNumber, name);
+		BankAccount account;
 
 		System.out.print("Is there na initial deposit (y/n)? ");
 		String teste = sc.next();
-		if (teste.equals("y")) {
+		if (teste.toLowerCase().equals("y")) {
 			System.out.print("Enter initial deposit value: ");
-			double value = sc.nextInt();
-			account.deposit(value);
+			double initialDeposit = sc.nextInt();
+			account = new BankAccount(accountNumber, name, initialDeposit);
 		}
-
-		System.out.println(account.toString());
+		else {
+			account = new BankAccount(accountNumber, name);
+		}
+		System.out.println(account);
 
 		System.out.print("\nEnter a deposit value: ");
 		double value = sc.nextInt();
 		account.deposit(value);
 		
-		System.out.println(account.toString());
+		System.out.println(account);
 		
 		System.out.print("\nEnter a withdraw value: ");
 		value = sc.nextInt();
 		account.withdraw(value);
 		
-		System.out.println(account.toString());
+		System.out.println(account);
 
 		sc.close();
+		
 	}
 
 }

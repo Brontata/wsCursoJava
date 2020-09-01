@@ -11,6 +11,11 @@ public class BankAccount {
 		this.accountNumber = accountNumber;
 		this.name = name;
 	}
+	public BankAccount(String accountNumber, String name, double initialDeposit) {
+		this.accountNumber = accountNumber;
+		this.name = name;
+		deposit(initialDeposit);
+	}
 
 	public String getAccountNumber() {
 		return accountNumber;
@@ -20,11 +25,12 @@ public class BankAccount {
 		return name;
 	}
 	
-	public double getBalance() {
-		return balance;
-	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public double getBalance() {
+		return balance;
 	}
 	
 	public void withdraw(double value) {
