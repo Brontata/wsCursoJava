@@ -21,7 +21,7 @@ public class Program {
 		System.out.printf("Area: %.2f%n", x.area());
 		System.out.printf("Perimeter: %.2f%n", x.perimeter());
 		System.out.printf("Diagonal: %.2f%n", x.diagonal());
-
+		System.out.println("Hello World!");
 		sc.close();
 	}
 
